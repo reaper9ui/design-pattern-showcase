@@ -4,7 +4,7 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Stack;
 
-public class Pizza {
+public class Pizza extends Order{
 
     Stack<Topping> toppingStack = new Stack<>();
     String crust;
@@ -21,7 +21,7 @@ public class Pizza {
         return toppingArr;
     }
 
-    
+
 
 
 
