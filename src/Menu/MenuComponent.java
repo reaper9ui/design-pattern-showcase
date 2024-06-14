@@ -1,6 +1,8 @@
 package Menu;
 
-public class MenuComponent {
+import java.util.Iterator;
+
+public class MenuComponent implements Iterator {
 
         public void add(MenuComponent menuItem){
             throw new UnsupportedOperationException("Can not add to menu item ");
@@ -34,6 +36,13 @@ public class MenuComponent {
 
         }
 
+    @Override
+    public boolean hasNext() {
+        return false;
+    }
 
-
+    @Override
+    public Object next() {
+        return null;
+    }
 }

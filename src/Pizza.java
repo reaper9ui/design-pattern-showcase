@@ -7,7 +7,6 @@ import java.util.Stack;
 public class Pizza extends Order{
 
     Stack<Topping> toppingStack = new Stack<>();
-    String crust;
     boolean gluten;
 
 
