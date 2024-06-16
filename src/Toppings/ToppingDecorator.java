@@ -2,6 +2,6 @@ package Toppings;
 
 import FoodItems.Pizza;
 
-public class ToppingDecorator extends Pizza {
+public abstract class ToppingDecorator extends Pizza {
 
 }

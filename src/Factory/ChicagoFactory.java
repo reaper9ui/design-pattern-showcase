@@ -1,17 +1,17 @@
 package Factory;
 
 import FoodItems.Pizza;
+import PizzaTypes.MegaPizza;
 
 public class ChicagoFactory extends PizzaStore{
     Pizza pizza;
 
-    public ChicagoFactory(Pizza pizza) {
-        this.pizza = pizza;
-    }
-
     @Override
     public Pizza createPizza(String pizza) {
-        return null;
-        // NEEDS COOKING  :D
+       if(pizza.equals("MegaPizza")){
+            return new MegaPizza();
+       }
+
+       return null;
     }
 }

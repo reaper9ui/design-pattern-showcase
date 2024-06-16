@@ -5,22 +5,14 @@ import java.util.Stack;
 
 public class Pizza extends Order {
 
-//    Stack<Topping> toppingStack = new Stack<>();
-//    boolean gluten;
-//
-//
-//    public ArrayList<Topping> getToppings(){
-//        ArrayList<Topping> toppingArr = new ArrayList<>();
-//
-//        while(!toppingStack.isEmpty()) {
-//            Topping tmp = toppingStack.pop();
-//            toppingArr.add(tmp);
-//        }
-//        return toppingArr;
-//    }
 
+    public double cost(){
+        return 1.50;
+    }
 
-
+    public void print(){
+        System.out.print("I am just a regular guy");
+    }
 
 
 
