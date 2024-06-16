@@ -1,0 +1,5 @@
+
+
+- if i give the option for different stores, I will need to develop menus accordingly, and pizza and
+pizza toppings accordingly
+- RN as I have it I am giving the Waiter a lot of tasks (I/O) I am wondering if I should create something seperate to handle input
