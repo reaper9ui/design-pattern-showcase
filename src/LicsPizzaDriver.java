@@ -2,9 +2,11 @@ import Employees.Waiter;
 import Factory.ChicagoFactory;
 import Factory.NewYakFactory;
 import Factory.PizzaStore;
+import Factory.ShopChooser;
 import FoodItems.Pizza;
 import Menu.DinnerMenu;
 import Menu.MenuComponent;
+import Toppings.Pepperono;
 
 import java.util.Scanner;
 
@@ -12,17 +14,13 @@ public class LicsPizzaDriver {
 
     public static void main(String[] args) {
         PizzaStore factory = null;
-
+        ShopChooser shop = new ShopChooser();
         Scanner scanner = new Scanner(System.in);
         System.out.print("Choose a number for each location: \n " +
                 " 1. NYC Shop \n" +
                 " 2. Chicago Shop \n ");
         int chooseShop = scanner.nextInt();
-        if(chooseShop == 1 ){
-            factory = new NewYakFactory();
-        }else {
-            factory = new ChicagoFactory();
-        }
+        factory = shop.Shopper(chooseShop);
 
         scanner.nextLine();
 
@@ -39,8 +37,13 @@ public class LicsPizzaDriver {
         Pizza flower = new Pizza();
         flower = factory.createPizza(Entree);
         flower.print();
+        System.out.print("Any Toppings ( i recommend )?:  \n " );
+        String toppers = scanner.nextLine();
+        if(toppers.equals("Pepperono")){
+            flower = new Pepperono(flower);
+        }
 //      System.out.print("Anything else?:  \n " );
 //      String addOns = scanner.nextLine();
-        System.out.print("Sounds good, we will have that right out for you");
+        System.out.print("Sounds good, we will have that right out for you" + flower.cost());
     }
 }

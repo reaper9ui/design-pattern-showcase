@@ -5,7 +5,6 @@ public class MenuItem extends MenuComponent{
     String name;
     String description;
     boolean vegan;
-    boolean gluten;
     double price;
 
     public MenuItem(String name
@@ -16,7 +15,6 @@ public class MenuItem extends MenuComponent{
         this.name = name;
         this.description = description;
         this.vegan = vegan;
-        this.gluten = gluten;
         this.price = price;
     }
 
@@ -40,11 +38,6 @@ public class MenuItem extends MenuComponent{
     @Override
     public boolean isVegan() {
         return vegan;
-    }
-
-    @Override
-    public boolean isGluten() {
-        return gluten;
     }
 
     @Override
